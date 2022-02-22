@@ -12,7 +12,7 @@ public class Car{
       break;
       case 2: fuel = "Electric";
       break;
-      default : {System.out.println("Àß¸ø ÀÔ·ÂÇÏ¼Ì½À´Ï´Ù."); System.exit(0);} break;
+      default : {System.out.println("ìž˜ëª» ìž…ë ¥í•˜ì…¨ìŠµë‹ˆë‹¤."); System.exit(0);} break;
       }
    }
    public static String getFuel() {
@@ -21,18 +21,18 @@ public class Car{
 
    public static void car() {
       Scanner keyboard = new Scanner(System.in);
-      System.out.println("¿øÇÏ½Ã´Â Â÷ÀÇ ¿¬·á¸¦ ¼±ÅÃÇØÁÖ¼¼¿ä");
+      System.out.println("ì›í•˜ì‹œëŠ” ì°¨ì˜ ì—°ë£Œë¥¼ ì„ íƒí•´ì£¼ì„¸ìš”");
       System.out.print("1.Gasolin  2.Electric  =>  ");
       int fuel = keyboard.nextInt();
       setFuel(fuel);
-      System.out.println(getFuel() + "À» ¼±ÅÃÇÏ¼Ì½À´Ï´Ù!");
+      System.out.println(getFuel() + "ì„ ì„ íƒí•˜ì…¨ìŠµë‹ˆë‹¤!");
       System.out.println();
-      System.out.print("1. ±¹»êÂ÷  2. ¿ÜÁ¦Â÷  =>  ");
+      System.out.print("1. êµ­ì‚°ì°¨  2. ì™¸ì œì°¨  =>  ");
       int country = keyboard.nextInt();
       if(country == 1) {
          Domestic car = null;
          System.out.println();
-         System.out.println("Â÷Á¾ ºê·£µå¸¦ ¼±ÅÃÇØÁÖ¼¼¿ä");
+         System.out.println("ì°¨ì¢… ë¸Œëžœë“œë¥¼ ì„ íƒí•´ì£¼ì„¸ìš”");
          if(getFuel().equals("Electric")) {
             System.out.print("1.Hyundai  2.Kia  => ");
             int brand = keyboard.nextInt();
@@ -40,17 +40,17 @@ public class Car{
                switch(brand) {
                case 1: car = new Electric_Hyundai(); break;
                case 2: car = new Electric_Kia(); break;
-               default: throw new Error("¾ø´Â ¹øÈ£ÀÔ´Ï´Ù");
+               default: throw new Error("ì—†ëŠ” ë²ˆí˜¸ìž…ë‹ˆë‹¤");
                }
             }
             catch(Error e) {
-               System.out.println(e+ " ´Ù½Ã ÇÑ¹ø ÀÔ·Â¹Ù¶ø´Ï´Ù");
+               System.out.println(e+ " ë‹¤ì‹œ í•œë²ˆ ìž…ë ¥ë°”ëžë‹ˆë‹¤");
                System.out.print("1.Hyundai  2.Kia  => ");
                brand = keyboard.nextInt();
                switch(brand) {
                case 1: car = new Electric_Hyundai(); break;
                case 2: car = new Electric_Kia(); break;
-               default: {System.out.println("ÇÁ·Î±×·¥ÀÌ Á¾·áµÇ¾ú½À´Ï´Ù."); System.exit(0);} break;
+               default: {System.out.println("í”„ë¡œê·¸ëž¨ì´ ì¢…ë£Œë˜ì—ˆìŠµë‹ˆë‹¤."); System.exit(0);} break;
                }
             }
          }
@@ -63,11 +63,11 @@ public class Car{
                case 2: car = new Kia(); break;
                case 3: car = new Genesis(); break;
                case 4: car = new Chevrolet(); break;
-               default: throw new Error("¾ø´Â ¹øÈ£ÀÔ´Ï´Ù");
+               default: throw new Error("ì—†ëŠ” ë²ˆí˜¸ìž…ë‹ˆë‹¤");
                }
             }
             catch(Error e) {
-               System.out.println(e+ " ´Ù½Ã ÇÑ¹ø ÀÔ·Â¹Ù¶ø´Ï´Ù");
+               System.out.println(e+ " ë‹¤ì‹œ í•œë²ˆ ìž…ë ¥ë°”ëžë‹ˆë‹¤");
                System.out.print("1. Hyundai  2.Kia  3.Genesis  4.Chevrolet  => ");
                brand = keyboard.nextInt();
                switch(brand) {
@@ -75,18 +75,16 @@ public class Car{
                case 2: car = new Kia(); break;
                case 3: car = new Genesis(); break;
                case 4: car = new Chevrolet(); break;
-               default: {System.out.println("ÇÁ·Î±×·¥ÀÌ Á¾·áµÇ¾ú½À´Ï´Ù."); System.exit(0);} break;
+               default: {System.out.println("í”„ë¡œê·¸ëž¨ì´ ì¢…ë£Œë˜ì—ˆìŠµë‹ˆë‹¤."); System.exit(0);} break;
                }
             }
          }
-         
          car.selectModel();
-
       }
       else if(country == 2) {
          Foreign car = null;
          System.out.println();
-         System.out.println("Â÷Á¾ ºê·£µå¸¦ ¼±ÅÃÇØÁÖ¼¼¿ä");
+         System.out.println("ì°¨ì¢… ë¸Œëžœë“œë¥¼ ì„ íƒí•´ì£¼ì„¸ìš”");
          if(getFuel().equals("Electric")) {
             System.out.print("1.Tesla  2.Renault_Nissan  => ");
             int brand = keyboard.nextInt();
@@ -94,20 +92,19 @@ public class Car{
                switch(brand) {
                case 1: car = new Tesla(); break;
                case 2: car = new Renault_Nissan(); break;
-               default: throw new Error("¾ø´Â ¹øÈ£ÀÔ´Ï´Ù");
+               default: throw new Error("ì—†ëŠ” ë²ˆí˜¸ìž…ë‹ˆë‹¤");
                }
             }
             catch(Error e) {
-               System.out.println(e+ " ´Ù½Ã ÇÑ¹ø ÀÔ·Â¹Ù¶ø´Ï´Ù");
+               System.out.println(e+ " ë‹¤ì‹œ í•œë²ˆ ìž…ë ¥ë°”ëžë‹ˆë‹¤");
                System.out.print("1.Tesla  2.Renault_Nissan  => ");
                brand = keyboard.nextInt();
                switch(brand) {
                case 1: car = new Tesla(); break;
                case 2: car = new Renault_Nissan(); break;
-               default: {System.out.println("ÇÁ·Î±×·¥ÀÌ Á¾·áµÇ¾ú½À´Ï´Ù."); System.exit(0);} break;
+               default: {System.out.println("í”„ë¡œê·¸ëž¨ì´ ì¢…ë£Œë˜ì—ˆìŠµë‹ˆë‹¤."); System.exit(0);} break;
                }
             }
-
          }
          else {
             System.out.print("1.Benz  2.Bmw  3.Audi  4.Volkswagen  => ");
@@ -118,11 +115,11 @@ public class Car{
                case 2: car = new Bmw(); break;
                case 3: car = new Audi(); break;
                case 4: car = new Volkswagen(); break;
-               default: throw new Error("¾ø´Â ¹øÈ£ÀÔ´Ï´Ù");
+               default: throw new Error("ì—†ëŠ” ë²ˆí˜¸ìž…ë‹ˆë‹¤");
                }
             }
             catch(Error e) {
-               System.out.println(e+ " ´Ù½Ã ÇÑ¹ø ÀÔ·Â¹Ù¶ø´Ï´Ù");
+               System.out.println(e+ " ë‹¤ì‹œ í•œë²ˆ ìž…ë ¥ë°”ëžë‹ˆë‹¤");
                System.out.print("1.Benz  2.Bmw  3.Audi  4.Volkswagen  => ");
                brand = keyboard.nextInt();
                switch(brand) {
@@ -130,16 +127,15 @@ public class Car{
                case 2: car = new Bmw(); break;
                case 3: car = new Audi(); break;
                case 4: car = new Volkswagen(); break;
-               default: {System.out.println("ÇÁ·Î±×·¥ÀÌ Á¾·áµÇ¾ú½À´Ï´Ù."); System.exit(0);} break;
+               default: {System.out.println("í”„ë¡œê·¸ëž¨ì´ ì¢…ë£Œë˜ì—ˆìŠµë‹ˆë‹¤."); System.exit(0);} break;
                }
             }
          }
          
          car.selectModel();
-
       }
       else {
-         System.out.println("Àß¸ø ÀÔ·ÂÇÏ¼Ì½À´Ï´Ù. ´Ù½Ã ÀÔ·ÂÇØÁÖ½Ã±â ¹Ù¶ø´Ï´Ù.");
+         System.out.println("ìž˜ëª» ìž…ë ¥í•˜ì…¨ìŠµë‹ˆë‹¤. ë‹¤ì‹œ ìž…ë ¥í•´ì£¼ì‹œê¸° ë°”ëžë‹ˆë‹¤.");
       }
       
    }
@@ -147,14 +143,14 @@ public class Car{
 }
 
 
-// ±¹»êÂ÷
+// êµ­ì‚°ì°¨
 abstract class Domestic{
    final Scanner keyboard = new Scanner(System.in);
    abstract public void selectCarModel(int model);
    abstract public void selectModel();
 }
 
-// ±¹»êÂ÷ - Àü±âÂ÷
+// êµ­ì‚°ì°¨ - ì „ê¸°ì°¨
 class Electric_Hyundai extends Domestic{
    @Override
    public void selectCarModel(int model) 
@@ -162,56 +158,55 @@ class Electric_Hyundai extends Domestic{
       int car;
       switch(model) {
       case 1: {
-         System.out.print("1.ÀÍ½ºÅ¬·ç½Ãºê  2.ÇÁ·¹½ºÆ¼Áö  =>  ");
+         System.out.print("1.ìµìŠ¤í´ë£¨ì‹œë¸Œ  2.í”„ë ˆìŠ¤í‹°ì§€  =>  ");
          car = keyboard.nextInt();
-         if( car == 1) System.out.println("ÇØ´ç Â÷·®ÀÇ °¡°ÝÀº 4,980¸¸¿øÀÔ´Ï´Ù.");
-         else if(car == 2) System.out.println("ÇØ´ç Â÷·®ÀÇ °¡°ÝÀº 5,455¸¸¿øÀÔ´Ï´Ù.");
-         else System.out.println("Á¸ÀçÇÏÁö ¾Ê´Â ¸ðµ¨ÀÔ´Ï´Ù.");
+         if( car == 1) System.out.println("í•´ë‹¹ ì°¨ëŸ‰ì˜ ê°€ê²©ì€ 4,980ë§Œì›ìž…ë‹ˆë‹¤.");
+         else if(car == 2) System.out.println("í•´ë‹¹ ì°¨ëŸ‰ì˜ ê°€ê²©ì€ 5,455ë§Œì›ìž…ë‹ˆë‹¤.");
+         else System.out.println("ì¡´ìž¬í•˜ì§€ ì•ŠëŠ” ëª¨ë¸ìž…ë‹ˆë‹¤.");
       }
       break;
       case 2:{
-         System.out.print("1.ÇÁ¸®¹Ì¾ö  2.¸£ºí¶û  3.ÀÍ½ºÅ¬·ç½Ãºê  4.Ä¶¸®±×·¡ÇÇ  =>  ");
+         System.out.print("1.í”„ë¦¬ë¯¸ì—„  2.ë¥´ë¸”ëž‘  3.ìµìŠ¤í´ë£¨ì‹œë¸Œ  4.ìº˜ë¦¬ê·¸ëž˜í”¼  =>  ");
          car = keyboard.nextInt();
          switch(car) {
-         case 1:  System.out.println("ÇØ´ç Â÷·®ÀÇ °¡°ÝÀº 3,679¸¸¿øÀÔ´Ï´Ù."); break;
-         case 2:  System.out.println("ÇØ´ç Â÷·®ÀÇ °¡°ÝÀº 3,900¸¸¿øÀÔ´Ï´Ù."); break;
-         case 3:  System.out.println("ÇØ´ç Â÷·®ÀÇ °¡°ÝÀº 4,012¸¸¿øÀÔ´Ï´Ù."); break;
-         case 4:  System.out.println("ÇØ´ç Â÷·®ÀÇ °¡°ÝÀº 4,489¸¸¿øÀÔ´Ï´Ù."); break;
-         default: System.out.println("Á¸ÀçÇÏÁö ¾Ê´Â ¸ðµ¨ÀÔ´Ï´Ù."); break;
+         case 1:  System.out.println("í•´ë‹¹ ì°¨ëŸ‰ì˜ ê°€ê²©ì€ 3,679ë§Œì›ìž…ë‹ˆë‹¤."); break;
+         case 2:  System.out.println("í•´ë‹¹ ì°¨ëŸ‰ì˜ ê°€ê²©ì€ 3,900ë§Œì›ìž…ë‹ˆë‹¤."); break;
+         case 3:  System.out.println("í•´ë‹¹ ì°¨ëŸ‰ì˜ ê°€ê²©ì€ 4,012ë§Œì›ìž…ë‹ˆë‹¤."); break;
+         case 4:  System.out.println("í•´ë‹¹ ì°¨ëŸ‰ì˜ ê°€ê²©ì€ 4,489ë§Œì›ìž…ë‹ˆë‹¤."); break;
+         default: System.out.println("ì¡´ìž¬í•˜ì§€ ì•ŠëŠ” ëª¨ë¸ìž…ë‹ˆë‹¤."); break;
          }
       }
       break;
       case 3: {
-         System.out.print("1.¸ð´ø  2.ÇÁ¸®¹Ì¾ö ÇÃ·¯½º  3.ÀÎ½ºÆÛ·¹ÀÌ¼Ç  =>  ");
+         System.out.print("1.ëª¨ë˜  2.í”„ë¦¬ë¯¸ì—„ í”ŒëŸ¬ìŠ¤  3.ì¸ìŠ¤í¼ë ˆì´ì…˜  =>  ");
          car = keyboard.nextInt();
-         if( car == 1) System.out.println("ÇØ´ç Â÷·®ÀÇ °¡°ÝÀº 2,881¸¸¿øÀÔ´Ï´Ù.");
-         else if(car == 2) System.out.println("ÇØ´ç Â÷·®ÀÇ °¡°ÝÀº 3,108¸¸¿øÀÔ´Ï´Ù.");
-         else if(car == 3) System.out.println("ÇØ´ç Â÷·®ÀÇ °¡°ÝÀº 3,635¸¸¿øÀÔ´Ï´Ù");
-         else System.out.println("Á¸ÀçÇÏÁö ¾Ê´Â ¸ðµ¨ÀÔ´Ï´Ù.");
+         if( car == 1) System.out.println("í•´ë‹¹ ì°¨ëŸ‰ì˜ ê°€ê²©ì€ 2,881ë§Œì›ìž…ë‹ˆë‹¤.");
+         else if(car == 2) System.out.println("í•´ë‹¹ ì°¨ëŸ‰ì˜ ê°€ê²©ì€ 3,108ë§Œì›ìž…ë‹ˆë‹¤.");
+         else if(car == 3) System.out.println("í•´ë‹¹ ì°¨ëŸ‰ì˜ ê°€ê²©ì€ 3,635ë§Œì›ìž…ë‹ˆë‹¤");
+         else System.out.println("ì¡´ìž¬í•˜ì§€ ì•ŠëŠ” ëª¨ë¸ìž…ë‹ˆë‹¤.");
       }
       break;
       case 4: {
-         System.out.print("1.¸ð´ø  2.ÇÁ¸®¹Ì¾ö  3.ÀÎ½ºÆÛ·¹ÀÌ¼Ç  =>  ");
+         System.out.print("1.ëª¨ë˜  2.í”„ë¦¬ë¯¸ì—„  3.ì¸ìŠ¤í¼ë ˆì´ì…˜  =>  ");
          car = keyboard.nextInt();
-         if( car == 1) System.out.println("ÇØ´ç Â÷·®ÀÇ °¡°ÝÀº 2,857¸¸¿øÀÔ´Ï´Ù.");
-         else if(car == 2) System.out.println("ÇØ´ç Â÷·®ÀÇ °¡°ÝÀº 3,073¸¸¿øÀÔ´Ï´Ù.");
-         else if(car == 3) System.out.println("ÇØ´ç Â÷·®ÀÇ °¡°ÝÀº 3,467¸¸¿øÀÔ´Ï´Ù");
-         else System.out.println("Á¸ÀçÇÏÁö ¾Ê´Â ¸ðµ¨ÀÔ´Ï´Ù.");
+         if( car == 1) System.out.println("í•´ë‹¹ ì°¨ëŸ‰ì˜ ê°€ê²©ì€ 2,857ë§Œì›ìž…ë‹ˆë‹¤.");
+         else if(car == 2) System.out.println("í•´ë‹¹ ì°¨ëŸ‰ì˜ ê°€ê²©ì€ 3,073ë§Œì›ìž…ë‹ˆë‹¤.");
+         else if(car == 3) System.out.println("í•´ë‹¹ ì°¨ëŸ‰ì˜ ê°€ê²©ì€ 3,467ë§Œì›ìž…ë‹ˆë‹¤");
+         else System.out.println("ì¡´ìž¬í•˜ì§€ ì•ŠëŠ” ëª¨ë¸ìž…ë‹ˆë‹¤.");
       }
       break;
-      default: System.out.println("Á¸ÀçÇÏÁö ¾Ê´Â ¸ðµ¨ÀÔ´Ï´Ù."); break;
+      default: System.out.println("ì¡´ìž¬í•˜ì§€ ì•ŠëŠ” ëª¨ë¸ìž…ë‹ˆë‹¤."); break;
       }
    }
    public void selectModel()
    {
       System.out.println();
-      System.out.println("Çö´ë Àü±âÂ÷¸¦ ¼±ÅÃÇÏ¼Ì±º¿ä! ¸ðµ¨À» ¼±ÅÃÇØÁÖ¼¼¿ä");
-      System.out.print("1.¾ÆÀÌ¿À´Ð 5  2.±×·£Àú ÇÏÀÌºê¸®µå  3.½î³ªÅ¸ ÇÏÀÌºê¸®µå  4. Åõ½Ñ ÇÏÀÌºê¸®µå  =>  ");
+      System.out.println("í˜„ëŒ€ ì „ê¸°ì°¨ë¥¼ ì„ íƒí•˜ì…¨êµ°ìš”! ëª¨ë¸ì„ ì„ íƒí•´ì£¼ì„¸ìš”");
+      System.out.print("1.ì•„ì´ì˜¤ë‹‰ 5  2.ê·¸ëžœì € í•˜ì´ë¸Œë¦¬ë“œ  3.ì˜ë‚˜íƒ€ í•˜ì´ë¸Œë¦¬ë“œ  4. íˆ¬ì‹¼ í•˜ì´ë¸Œë¦¬ë“œ  =>  ");
       int model = keyboard.nextInt();
       System.out.println();
       selectCarModel(model);
    }
-   
    
 }
 class Electric_Kia extends Domestic{
@@ -219,17 +214,17 @@ class Electric_Kia extends Domestic{
    public void selectCarModel(int model) 
    {
       switch(model) {
-      case 1: System.out.println("ÇØ´ç Â÷·®ÀÇ °¡°ÝÀº 4,187¸¸¿øÀÔ´Ï´Ù."); break;
-      case 2: System.out.println("ÇØ´ç Â÷·®ÀÇ °¡°ÝÀº 4,780 ~ 4,980¸¸¿øÀÔ´Ï´Ù."); break;
-      case 3: System.out.println("ÇØ´ç Â÷·®ÀÇ °¡°ÝÀº 4,950 ~ 7,200¸¸¿øÀÔ´Ï´Ù."); break;
-      default: System.out.println("Á¸ÀçÇÏÁö ¾Ê´Â ¸ðµ¨ÀÔ´Ï´Ù."); break;
+      case 1: System.out.println("í•´ë‹¹ ì°¨ëŸ‰ì˜ ê°€ê²©ì€ 4,187ë§Œì›ìž…ë‹ˆë‹¤."); break;
+      case 2: System.out.println("í•´ë‹¹ ì°¨ëŸ‰ì˜ ê°€ê²©ì€ 4,780 ~ 4,980ë§Œì›ìž…ë‹ˆë‹¤."); break;
+      case 3: System.out.println("í•´ë‹¹ ì°¨ëŸ‰ì˜ ê°€ê²©ì€ 4,950 ~ 7,200ë§Œì›ìž…ë‹ˆë‹¤."); break;
+      default: System.out.println("ì¡´ìž¬í•˜ì§€ ì•ŠëŠ” ëª¨ë¸ìž…ë‹ˆë‹¤."); break;
       }
    }
    public void selectModel()
    {
       System.out.println();
-      System.out.println("±â¾Æ Àü±âÂ÷¸¦ ¼±ÅÃÇÏ¼Ì±º¿ä! ¸ðµ¨À» ¼±ÅÃÇØÁÖ¼¼¿ä");
-      System.out.print("1.½î¿ï EV 5  2.´Ï·Î EV  3.EV6  =>  ");
+      System.out.println("ê¸°ì•„ ì „ê¸°ì°¨ë¥¼ ì„ íƒí•˜ì…¨êµ°ìš”! ëª¨ë¸ì„ ì„ íƒí•´ì£¼ì„¸ìš”");
+      System.out.print("1.ì˜ìš¸ EV 5  2.ë‹ˆë¡œ EV  3.EV6  =>  ");
       int model = keyboard.nextInt();
       System.out.println();
       selectCarModel(model);
@@ -237,23 +232,23 @@ class Electric_Kia extends Domestic{
    
 }
 
-// ±¹»êÂ÷ - µðÁ©, °¡¼Ö¸°
+// êµ­ì‚°ì°¨ - ë””ì ¤, ê°€ì†”ë¦°
 class Hyundai_car extends Domestic{
    @Override
    public void selectCarModel(int model) 
    {
       switch(model) {
-         case 1: System.out.println("ÇØ´ç Â÷·®ÀÇ °¡°ÝÀº 2,975 ~ 4,212¸¸¿øÀÔ´Ï´Ù."); break;
-         case 2: System.out.println("ÇØ´ç Â÷·®ÀÇ °¡°ÝÀº 3,573 ~ 5,563¸¸¿øÀÔ´Ï´Ù."); break;
-         case 3: System.out.println("ÇØ´ç Â÷·®ÀÇ °¡°ÝÀº 2,435 ~ 3,567¸¸¿øÀÔ´Ï´Ù."); break;
-         default: System.out.println("Á¸ÀçÇÏÁö ¾Ê´Â ¸ðµ¨ÀÔ´Ï´Ù."); break;
+         case 1: System.out.println("í•´ë‹¹ ì°¨ëŸ‰ì˜ ê°€ê²©ì€ 2,975 ~ 4,212ë§Œì›ìž…ë‹ˆë‹¤."); break;
+         case 2: System.out.println("í•´ë‹¹ ì°¨ëŸ‰ì˜ ê°€ê²©ì€ 3,573 ~ 5,563ë§Œì›ìž…ë‹ˆë‹¤."); break;
+         case 3: System.out.println("í•´ë‹¹ ì°¨ëŸ‰ì˜ ê°€ê²©ì€ 2,435 ~ 3,567ë§Œì›ìž…ë‹ˆë‹¤."); break;
+         default: System.out.println("ì¡´ìž¬í•˜ì§€ ì•ŠëŠ” ëª¨ë¸ìž…ë‹ˆë‹¤."); break;
          }
    }
    public void selectModel()
    {
       System.out.println();
-      System.out.println("Çö´ë¸¦ ¼±ÅÃÇÏ¼Ì±º¿ä! ¸ðµ¨À» ¼±ÅÃÇØÁÖ¼¼¿ä");
-      System.out.print("1.2020 ½ÑÅ¸Æä  2.2020 ÆÓ¸®¼¼ÀÌµå EV  3.2021 Åõ½Ñ  =>  ");
+      System.out.println("í˜„ëŒ€ë¥¼ ì„ íƒí•˜ì…¨êµ°ìš”! ëª¨ë¸ì„ ì„ íƒí•´ì£¼ì„¸ìš”");
+      System.out.print("1.2020 ì‹¼íƒ€íŽ˜  2.2020 íŒ°ë¦¬ì„¸ì´ë“œ EV  3.2021 íˆ¬ì‹¼  =>  ");
       int model = keyboard.nextInt();
       System.out.println();
       selectCarModel(model);
@@ -265,16 +260,16 @@ class Kia extends Domestic{
    public void selectCarModel(int model) 
    {
       switch(model) {
-         case 1: System.out.println("ÇØ´ç Â÷·®ÀÇ °¡°ÝÀº 1,738 ~ 2,425¸¸¿øÀÔ´Ï´Ù."); break;
-         case 2: System.out.println("ÇØ´ç Â÷·®ÀÇ °¡°ÝÀº 3,220 ~ 4,526¸¸¿øÀÔ´Ï´Ù."); break;
-         case 3: System.out.println("ÇØ´ç Â÷·®ÀÇ °¡°ÝÀº 2,356 ~ 3,151¸¸¿øÀÔ´Ï´Ù."); break;
-         default: System.out.println("Á¸ÀçÇÏÁö ¾Ê´Â ¸ðµ¨ÀÔ´Ï´Ù."); break;
+         case 1: System.out.println("í•´ë‹¹ ì°¨ëŸ‰ì˜ ê°€ê²©ì€ 1,738 ~ 2,425ë§Œì›ìž…ë‹ˆë‹¤."); break;
+         case 2: System.out.println("í•´ë‹¹ ì°¨ëŸ‰ì˜ ê°€ê²©ì€ 3,220 ~ 4,526ë§Œì›ìž…ë‹ˆë‹¤."); break;
+         case 3: System.out.println("í•´ë‹¹ ì°¨ëŸ‰ì˜ ê°€ê²©ì€ 2,356 ~ 3,151ë§Œì›ìž…ë‹ˆë‹¤."); break;
+         default: System.out.println("ì¡´ìž¬í•˜ì§€ ì•ŠëŠ” ëª¨ë¸ìž…ë‹ˆë‹¤."); break;
          }
    }
    public void selectModel()
    {
       System.out.println();
-      System.out.println("±â¾Æ¸¦ ¼±ÅÃÇÏ¼Ì±º¿ä! ¸ðµ¨À» ¼±ÅÃÇØÁÖ¼¼¿ä");
+      System.out.println("ê¸°ì•„ë¥¼ ì„ íƒí•˜ì…¨êµ°ìš”! ëª¨ë¸ì„ ì„ íƒí•´ì£¼ì„¸ìš”");
       System.out.print("1.2022 k3  2.2021 k8  3.2021 k5  =>  ");
       int model = keyboard.nextInt();
       System.out.println();
@@ -287,16 +282,16 @@ class Genesis extends Domestic{
    public void selectCarModel(int model) 
    {
       switch(model) {
-         case 1: System.out.println("ÇØ´ç Â÷·®ÀÇ °¡°ÝÀº 15,609¸¸¿øÀÔ´Ï´Ù."); break;
-         case 2: System.out.println("ÇØ´ç Â÷·®ÀÇ °¡°ÝÀº 5,291 ~ 6,214¸¸¿øÀÔ´Ï´Ù."); break;
-         case 3: System.out.println("ÇØ´ç Â÷·®ÀÇ °¡°ÝÀº 6,067 ~ 6,951¸¸¿øÀÔ´Ï´Ù."); break;
-         default: System.out.println("Á¸ÀçÇÏÁö ¾Ê´Â ¸ðµ¨ÀÔ´Ï´Ù."); break;
+         case 1: System.out.println("í•´ë‹¹ ì°¨ëŸ‰ì˜ ê°€ê²©ì€ 15,609ë§Œì›ìž…ë‹ˆë‹¤."); break;
+         case 2: System.out.println("í•´ë‹¹ ì°¨ëŸ‰ì˜ ê°€ê²©ì€ 5,291 ~ 6,214ë§Œì›ìž…ë‹ˆë‹¤."); break;
+         case 3: System.out.println("í•´ë‹¹ ì°¨ëŸ‰ì˜ ê°€ê²©ì€ 6,067 ~ 6,951ë§Œì›ìž…ë‹ˆë‹¤."); break;
+         default: System.out.println("ì¡´ìž¬í•˜ì§€ ì•ŠëŠ” ëª¨ë¸ìž…ë‹ˆë‹¤."); break;
          }
    }
    public void selectModel()
    {
       System.out.println();
-      System.out.println("Á¦³×½Ã½º¸¦ ¼±ÅÃÇÏ¼Ì±º¿ä! ¸ðµ¨À» ¼±ÅÃÇØÁÖ¼¼¿ä");
+      System.out.println("ì œë„¤ì‹œìŠ¤ë¥¼ ì„ íƒí•˜ì…¨êµ°ìš”! ëª¨ë¸ì„ ì„ íƒí•´ì£¼ì„¸ìš”");
       System.out.print("1.2021 G90L  2.2020 G80  3.2020 GV80  =>  ");
       int model = keyboard.nextInt();
       System.out.println();
@@ -308,17 +303,17 @@ class Chevrolet extends Domestic{
    public void selectCarModel(int model) 
    {
       switch(model) {
-         case 1: System.out.println("ÇØ´ç Â÷·®ÀÇ °¡°ÝÀº 1,885 ~ 2,333¸¸¿øÀÔ´Ï´Ù."); break;
-         case 2: System.out.println("ÇØ´ç Â÷·®ÀÇ °¡°ÝÀº 5,450 ~ 5,529¸¸¿øÀÔ´Ï´Ù."); break;
-         case 3: System.out.println("ÇØ´ç Â÷·®ÀÇ °¡°ÝÀº 2,364 ~ 3,338¸¸¿øÀÔ´Ï´Ù."); break;
-         default: System.out.println("Á¸ÀçÇÏÁö ¾Ê´Â ¸ðµ¨ÀÔ´Ï´Ù."); break;
+         case 1: System.out.println("í•´ë‹¹ ì°¨ëŸ‰ì˜ ê°€ê²©ì€ 1,885 ~ 2,333ë§Œì›ìž…ë‹ˆë‹¤."); break;
+         case 2: System.out.println("í•´ë‹¹ ì°¨ëŸ‰ì˜ ê°€ê²©ì€ 5,450 ~ 5,529ë§Œì›ìž…ë‹ˆë‹¤."); break;
+         case 3: System.out.println("í•´ë‹¹ ì°¨ëŸ‰ì˜ ê°€ê²©ì€ 2,364 ~ 3,338ë§Œì›ìž…ë‹ˆë‹¤."); break;
+         default: System.out.println("ì¡´ìž¬í•˜ì§€ ì•ŠëŠ” ëª¨ë¸ìž…ë‹ˆë‹¤."); break;
          }
    }
    public void selectModel()
    {
       System.out.println();
-      System.out.println("½¦º¸·¹¸¦ ¼±ÅÃÇÏ¼Ì±º¿ä! ¸ðµ¨À» ¼±ÅÃÇØÁÖ¼¼¿ä");
-      System.out.print("1.2022 ½¦º¸·¹ Æ®·¢½º  2.2021 ½¦º¸·¹ Ä«¸¶·Î  3.2021 ½¦º¸·¹ ¸»¸®ºÎ  =>  ");
+      System.out.println("ì‰ë³´ë ˆë¥¼ ì„ íƒí•˜ì…¨êµ°ìš”! ëª¨ë¸ì„ ì„ íƒí•´ì£¼ì„¸ìš”");
+      System.out.print("1.2022 ì‰ë³´ë ˆ íŠ¸ëž™ìŠ¤  2.2021 ì‰ë³´ë ˆ ì¹´ë§ˆë¡œ  3.2021 ì‰ë³´ë ˆ ë§ë¦¬ë¶€  =>  ");
       int model = keyboard.nextInt();
       System.out.println();
       selectCarModel(model);
@@ -327,8 +322,7 @@ class Chevrolet extends Domestic{
 }
 
 
-
-// ¿ÜÁ¦Â÷
+// ì™¸ì œì°¨
 abstract class Foreign{
    
    final Scanner keyboard = new Scanner(System.in);
@@ -336,23 +330,23 @@ abstract class Foreign{
    abstract public void selectModel();
 }
 
-// ¿ÜÁ¦Â÷ - µðÁ©, °¡¼Ö¸°
+// ì™¸ì œì°¨ - ë””ì ¤, ê°€ì†”ë¦°
 class Benz extends Foreign{
    @Override
    public void selectCarModel(int model) 
    {
       switch(model) {
-         case 1: System.out.println("ÇØ´ç Â÷·®ÀÇ °¡°ÝÀº 14,060 ~ 21,860¸¸¿øÀÔ´Ï´Ù."); break;
-         case 2: System.out.println("ÇØ´ç Â÷·®ÀÇ °¡°ÝÀº 21,760 ~ 24,560¸¸¿øÀÔ´Ï´Ù."); break;
-         case 3: System.out.println("ÇØ´ç Â÷·®ÀÇ °¡°ÝÀº 7,621¸¸¿øÀÔ´Ï´Ù."); break;
-         default: System.out.println("Á¸ÀçÇÏÁö ¾Ê´Â ¸ðµ¨ÀÔ´Ï´Ù."); break;
+         case 1: System.out.println("í•´ë‹¹ ì°¨ëŸ‰ì˜ ê°€ê²©ì€ 14,060 ~ 21,860ë§Œì›ìž…ë‹ˆë‹¤."); break;
+         case 2: System.out.println("í•´ë‹¹ ì°¨ëŸ‰ì˜ ê°€ê²©ì€ 21,760 ~ 24,560ë§Œì›ìž…ë‹ˆë‹¤."); break;
+         case 3: System.out.println("í•´ë‹¹ ì°¨ëŸ‰ì˜ ê°€ê²©ì€ 7,621ë§Œì›ìž…ë‹ˆë‹¤."); break;
+         default: System.out.println("ì¡´ìž¬í•˜ì§€ ì•ŠëŠ” ëª¨ë¸ìž…ë‹ˆë‹¤."); break;
          }
    }
    public void selectModel()
    {
       System.out.println();
-      System.out.println("º¥Ã÷¸¦ ¼±ÅÃÇÏ¼Ì±º¿ä! ¸ðµ¨À» ¼±ÅÃÇØÁÖ¼¼¿ä");
-      System.out.print("1.2021 º¥Ã÷ SÅ¬·¡½º  2.2021 º¥Ã÷ GÅ¬·¡½º  3.2021 º¥Ã÷ GLAÅ¬·¡½º AMG  =>  ");
+      System.out.println("ë²¤ì¸ ë¥¼ ì„ íƒí•˜ì…¨êµ°ìš”! ëª¨ë¸ì„ ì„ íƒí•´ì£¼ì„¸ìš”");
+      System.out.print("1.2021 ë²¤ì¸  Sí´ëž˜ìŠ¤  2.2021 ë²¤ì¸  Gí´ëž˜ìŠ¤  3.2021 ë²¤ì¸  GLAí´ëž˜ìŠ¤ AMG  =>  ");
       int model = keyboard.nextInt();
       System.out.println();
       selectCarModel(model);
@@ -364,16 +358,16 @@ class Bmw extends Foreign{
    public void selectCarModel(int model) 
    {
       switch(model) {
-         case 1: System.out.println("ÇØ´ç Â÷·®ÀÇ °¡°ÝÀº 12,270 ~ 13,170¸¸¿øÀÔ´Ï´Ù."); break;
-         case 2: System.out.println("ÇØ´ç Â÷·®ÀÇ °¡°ÝÀº 12,170 ~ 13,070¸¸¿øÀÔ´Ï´Ù."); break;
-         case 3: System.out.println("ÇØ´ç Â÷·®ÀÇ °¡°ÝÀº 12,630 ~ 16,940¸¸¿øÀÔ´Ï´Ù."); break;
-         default: System.out.println("Á¸ÀçÇÏÁö ¾Ê´Â ¸ðµ¨ÀÔ´Ï´Ù."); break;
+         case 1: System.out.println("í•´ë‹¹ ì°¨ëŸ‰ì˜ ê°€ê²©ì€ 12,270 ~ 13,170ë§Œì›ìž…ë‹ˆë‹¤."); break;
+         case 2: System.out.println("í•´ë‹¹ ì°¨ëŸ‰ì˜ ê°€ê²©ì€ 12,170 ~ 13,070ë§Œì›ìž…ë‹ˆë‹¤."); break;
+         case 3: System.out.println("í•´ë‹¹ ì°¨ëŸ‰ì˜ ê°€ê²©ì€ 12,630 ~ 16,940ë§Œì›ìž…ë‹ˆë‹¤."); break;
+         default: System.out.println("ì¡´ìž¬í•˜ì§€ ì•ŠëŠ” ëª¨ë¸ìž…ë‹ˆë‹¤."); break;
          }
    }
    public void selectModel()
    {
       System.out.println();
-      System.out.println("BMW¸¦ ¼±ÅÃÇÏ¼Ì±º¿ä! ¸ðµ¨À» ¼±ÅÃÇØÁÖ¼¼¿ä");
+      System.out.println("BMWë¥¼ ì„ íƒí•˜ì…¨êµ°ìš”! ëª¨ë¸ì„ ì„ íƒí•´ì£¼ì„¸ìš”");
       System.out.print("1.2021 BMW M4  2.2021 BMW M3  3.2021 BMW X7  =>  ");
       int model = keyboard.nextInt();
       System.out.println();
@@ -386,17 +380,17 @@ class Audi extends Foreign{
    public void selectCarModel(int model) 
    {
       switch(model) {
-         case 1: System.out.println("ÇØ´ç Â÷·®ÀÇ °¡°ÝÀº 25,569¸¸¿øÀÔ´Ï´Ù."); break;
-         case 2: System.out.println("ÇØ´ç Â÷·®ÀÇ °¡°ÝÀº 14,696 ~ 19,400¸¸¿øÀÔ´Ï´Ù."); break;
-         case 3: System.out.println("ÇØ´ç Â÷·®ÀÇ °¡°ÝÀº 13,696¸¸¿øÀÔ´Ï´Ù."); break;
-         default: System.out.println("Á¸ÀçÇÏÁö ¾Ê´Â ¸ðµ¨ÀÔ´Ï´Ù."); break;
+         case 1: System.out.println("í•´ë‹¹ ì°¨ëŸ‰ì˜ ê°€ê²©ì€ 25,569ë§Œì›ìž…ë‹ˆë‹¤."); break;
+         case 2: System.out.println("í•´ë‹¹ ì°¨ëŸ‰ì˜ ê°€ê²©ì€ 14,696 ~ 19,400ë§Œì›ìž…ë‹ˆë‹¤."); break;
+         case 3: System.out.println("í•´ë‹¹ ì°¨ëŸ‰ì˜ ê°€ê²©ì€ 13,696ë§Œì›ìž…ë‹ˆë‹¤."); break;
+         default: System.out.println("ì¡´ìž¬í•˜ì§€ ì•ŠëŠ” ëª¨ë¸ìž…ë‹ˆë‹¤."); break;
          }
    }
    public void selectModel()
    {
       System.out.println();
-      System.out.println("¾Æ¿ìµð¸¦ ¼±ÅÃÇÏ¼Ì±º¿ä! ¸ðµ¨À» ¼±ÅÃÇØÁÖ¼¼¿ä");
-      System.out.print("1.2021 ¾Æ¿ìµð R8  2.2021 ¾Æ¿ìµð A8L  3.2021 ¾Æ¿ìµð A8  =>  ");
+      System.out.println("ì•„ìš°ë””ë¥¼ ì„ íƒí•˜ì…¨êµ°ìš”! ëª¨ë¸ì„ ì„ íƒí•´ì£¼ì„¸ìš”");
+      System.out.print("1.2021 ì•„ìš°ë”” R8  2.2021 ì•„ìš°ë”” A8L  3.2021 ì•„ìš°ë”” A8  =>  ");
       int model = keyboard.nextInt();
       System.out.println();
       selectCarModel(model);
@@ -407,41 +401,41 @@ class Volkswagen extends Foreign{
    public void selectCarModel(int model) 
    {
       switch(model) {
-         case 1: System.out.println("ÇØ´ç Â÷·®ÀÇ °¡°ÝÀº 2,949 ~ 3,285¸¸¿øÀÔ´Ï´Ù."); break;
-         case 2: System.out.println("ÇØ´ç Â÷·®ÀÇ °¡°ÝÀº 8,275 ~ 9,659¸¸¿øÀÔ´Ï´Ù."); break;
-         case 3: System.out.println("ÇØ´ç Â÷·®ÀÇ °¡°ÝÀº 5,324 ~ 6,113¸¸¿øÀÔ´Ï´Ù."); break;
-         default: System.out.println("Á¸ÀçÇÏÁö ¾Ê´Â ¸ðµ¨ÀÔ´Ï´Ù."); break;
+         case 1: System.out.println("í•´ë‹¹ ì°¨ëŸ‰ì˜ ê°€ê²©ì€ 2,949 ~ 3,285ë§Œì›ìž…ë‹ˆë‹¤."); break;
+         case 2: System.out.println("í•´ë‹¹ ì°¨ëŸ‰ì˜ ê°€ê²©ì€ 8,275 ~ 9,659ë§Œì›ìž…ë‹ˆë‹¤."); break;
+         case 3: System.out.println("í•´ë‹¹ ì°¨ëŸ‰ì˜ ê°€ê²©ì€ 5,324 ~ 6,113ë§Œì›ìž…ë‹ˆë‹¤."); break;
+         default: System.out.println("ì¡´ìž¬í•˜ì§€ ì•ŠëŠ” ëª¨ë¸ìž…ë‹ˆë‹¤."); break;
          }
    }
    public void selectModel()
    {
       System.out.println();
-      System.out.println("Æø½º¹Ù°ÕÀ» ¼±ÅÃÇÏ¼Ì±º¿ä! ¸ðµ¨À» ¼±ÅÃÇØÁÖ¼¼¿ä");
-      System.out.print("1.2021 Æø½º¹Ù°Õ Á¦Å¸  2.2021 Æø½º¹Ù°Õ Åõ¾Æ·º  3.2020 Æø½º¹Ù°Õ ¾ÆÅ×¿Â  =>  ");
+      System.out.println("í­ìŠ¤ë°”ê²ì„ ì„ íƒí•˜ì…¨êµ°ìš”! ëª¨ë¸ì„ ì„ íƒí•´ì£¼ì„¸ìš”");
+      System.out.print("1.2021 í­ìŠ¤ë°”ê² ì œíƒ€  2.2021 í­ìŠ¤ë°”ê² íˆ¬ì•„ë ‰  3.2020 í­ìŠ¤ë°”ê² ì•„í…Œì˜¨  =>  ");
       int model = keyboard.nextInt();
       System.out.println();
       selectCarModel(model);
    }
 }
 
-// ¿ÜÁ¦Â÷ - Àü±âÂ÷
+// ì™¸ì œì°¨ - ì „ê¸°ì°¨
 class Tesla extends Foreign{
    @Override
    public void selectCarModel(int model) 
    {
       switch(model) {
-         case 1: System.out.println("ÇØ´ç Â÷·®ÀÇ °¡°ÝÀº 5,999 ~ 7,999¸¸¿øÀÔ´Ï´Ù."); break;
-         case 2: System.out.println("ÇØ´ç Â÷·®ÀÇ °¡°ÝÀº 5,479 ~ 7,479¸¸¿øÀÔ´Ï´Ù."); break;
-         case 3: System.out.println("ÇØ´ç Â÷·®ÀÇ °¡°ÝÀº 10,414 ~ 12,914¸¸¿øÀÔ´Ï´Ù."); break;
-         case 4: System.out.println("ÇØ´ç Â÷·®ÀÇ °¡°ÝÀº 11,599 ~ 13,599¸¸¿øÀÔ´Ï´Ù."); break;
-         default: System.out.println("Á¸ÀçÇÏÁö ¾Ê´Â ¸ðµ¨ÀÔ´Ï´Ù."); break;
+         case 1: System.out.println("í•´ë‹¹ ì°¨ëŸ‰ì˜ ê°€ê²©ì€ 5,999 ~ 7,999ë§Œì›ìž…ë‹ˆë‹¤."); break;
+         case 2: System.out.println("í•´ë‹¹ ì°¨ëŸ‰ì˜ ê°€ê²©ì€ 5,479 ~ 7,479ë§Œì›ìž…ë‹ˆë‹¤."); break;
+         case 3: System.out.println("í•´ë‹¹ ì°¨ëŸ‰ì˜ ê°€ê²©ì€ 10,414 ~ 12,914ë§Œì›ìž…ë‹ˆë‹¤."); break;
+         case 4: System.out.println("í•´ë‹¹ ì°¨ëŸ‰ì˜ ê°€ê²©ì€ 11,599 ~ 13,599ë§Œì›ìž…ë‹ˆë‹¤."); break;
+         default: System.out.println("ì¡´ìž¬í•˜ì§€ ì•ŠëŠ” ëª¨ë¸ìž…ë‹ˆë‹¤."); break;
          }
    }
    public void selectModel()
    {
       System.out.println();
-      System.out.println("Å×½½¶ó¸¦ ¼±ÅÃÇÏ¼Ì±º¿ä! ¸ðµ¨À» ¼±ÅÃÇØÁÖ¼¼¿ä");
-      System.out.print("1.2021 Å×½½¶ó ¸ðµ¨Y  2.2021 Å×½½¶ó ¸ðµ¨3  3.2019 Å×½½¶ó ¸ðµ¨S  4.2019 Å×½½¶ó ¸ðµ¨X  =>  ");
+      System.out.println("í…ŒìŠ¬ë¼ë¥¼ ì„ íƒí•˜ì…¨êµ°ìš”! ëª¨ë¸ì„ ì„ íƒí•´ì£¼ì„¸ìš”");
+      System.out.print("1.2021 í…ŒìŠ¬ë¼ ëª¨ë¸Y  2.2021 í…ŒìŠ¬ë¼ ëª¨ë¸3  3.2019 í…ŒìŠ¬ë¼ ëª¨ë¸S  4.2019 í…ŒìŠ¬ë¼ ëª¨ë¸X  =>  ");
       int model = keyboard.nextInt();
       System.out.println();
       selectCarModel(model);
@@ -453,17 +447,17 @@ class Renault_Nissan extends Foreign{
    public void selectCarModel(int model) 
    {
       switch(model) {
-         case 1: System.out.println("ÇØ´ç Â÷·®ÀÇ °¡°ÝÀº 4,190 ~ 4,830¸¸¿øÀÔ´Ï´Ù."); break;
-         case 2: System.out.println("ÇØ´ç Â÷·®ÀÇ °¡°ÝÀº 5,630¸¸¿øÀÔ´Ï´Ù."); break;
-         case 3: System.out.println("ÇØ´ç Â÷·®ÀÇ °¡°ÝÀº 40,000´Þ·¯ÀÔ´Ï´Ù."); break;
-         default: System.out.println("Á¸ÀçÇÏÁö ¾Ê´Â ¸ðµ¨ÀÔ´Ï´Ù."); break;
+         case 1: System.out.println("í•´ë‹¹ ì°¨ëŸ‰ì˜ ê°€ê²©ì€ 4,190 ~ 4,830ë§Œì›ìž…ë‹ˆë‹¤."); break;
+         case 2: System.out.println("í•´ë‹¹ ì°¨ëŸ‰ì˜ ê°€ê²©ì€ 5,630ë§Œì›ìž…ë‹ˆë‹¤."); break;
+         case 3: System.out.println("í•´ë‹¹ ì°¨ëŸ‰ì˜ ê°€ê²©ì€ 40,000ë‹¬ëŸ¬ìž…ë‹ˆë‹¤."); break;
+         default: System.out.println("ì¡´ìž¬í•˜ì§€ ì•ŠëŠ” ëª¨ë¸ìž…ë‹ˆë‹¤."); break;
          }
    }
    public void selectModel()
    {
       System.out.println();
-      System.out.println("¸£³ë ´Ö»êÀ» ¼±ÅÃÇÏ¼Ì±º¿ä! ¸ðµ¨À» ¼±ÅÃÇØÁÖ¼¼¿ä");
-      System.out.print("1.2019 ´Ö»ê ¸®ÇÁ  2.2017 ´Ö»ê ¹«¶ó³ë ÇÏÀÌºê¸®µå  3.2020 ´Ö»ê ¾Æ¸®¾ß  =>  ");
+      System.out.println("ë¥´ë…¸ ë‹›ì‚°ì„ ì„ íƒí•˜ì…¨êµ°ìš”! ëª¨ë¸ì„ ì„ íƒí•´ì£¼ì„¸ìš”");
+      System.out.print("1.2019 ë‹›ì‚° ë¦¬í”„  2.2017 ë‹›ì‚° ë¬´ë¼ë…¸ í•˜ì´ë¸Œë¦¬ë“œ  3.2020 ë‹›ì‚° ì•„ë¦¬ì•¼  =>  ");
       int model = keyboard.nextInt();
       System.out.println();
       selectCarModel(model);
